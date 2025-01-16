@@ -8,41 +8,37 @@
     <link rel="stylesheet" href="Colors.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-Eggshell">
+<body class="bg-Eggshell d-flex flex-column min-vh-100">
     <header class="bg-Tea d-flex justify-content-between align-items-center p-2">
         <img width="250vw" src="logo.svg" alt="logo" />
         <div class="d-flex">
           <a href="index.html" class="nav-t-s">Home</a>
           <a href="contact.html" class="nav-t-s">Contact</a>
-      </div>
-      <div>
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M57.1755 50.3145H53.562L52.2813 49.0795C56.7639 43.8651 59.4626 37.0955 59.4626 29.7313C59.4626 13.3105 46.1521 0 29.7313 0C13.3105 0 0 13.3105 0 29.7313C0 46.1521 13.3105 59.4626 29.7313 59.4626C37.0955 59.4626 43.8651 56.7639 49.0795 52.2813L50.3145 53.562V57.1755L73.1847 80L80 73.1847L57.1755 50.3145ZM29.7313 50.3145C18.3419 50.3145 9.14808 41.1206 9.14808 29.7313C9.14808 18.3419 18.3419 9.14808 29.7313 9.14808C41.1206 9.14808 50.3145 18.3419 50.3145 29.7313C50.3145 41.1206 41.1206 50.3145 29.7313 50.3145Z" fill="black"/>
+        </div>
+        <div>
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M57.1755 50.3145H53.562L52.2813 49.0795C56.7639 43.8651 59.4626 37.0955 59.4626 29.7313C59.4626 13.3105 46.1521 0 29.7313 0C13.3105 0 0 13.3105 0 29.7313C0 46.1521 13.3105 59.4626 29.7313 59.4626C37.0955 59.4626 43.8651 56.7639 49.0795 52.2813L50.3145 53.562V57.1755L73.1847 80L80 73.1847L57.1755 50.3145ZM29.7313 50.3145C18.3419 50.3145 9.14808 41.1206 9.14808 29.7313C9.14808 18.3419 18.3419 9.14808 29.7313 9.14808C41.1206 9.14808 50.3145 18.3419 50.3145 29.7313C50.3145 41.1206 41.1206 50.3145 29.7313 50.3145Z" fill="black"/>
             </svg>
             <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M40 0C17.92 0 0 17.92 0 40C0 62.08 17.92 80 40 80C62.08 80 80 62.08 80 40C80 17.92 62.08 0 40 0ZM40 16C47.72 16 54 22.28 54 30C54 37.72 47.72 44 40 44C32.28 44 26 37.72 26 30C26 22.28 32.28 16 40 16ZM40 72C31.88 72 22.28 68.72 15.44 60.48C22.2 55.2 30.72 52 40 52C49.28 52 57.8 55.2 64.56 60.48C57.72 68.72 48.12 72 40 72Z" fill="black"/>
-              </svg>
-        
-      </div>
-      </header>
-      <br>
-      <form action="index.html">
-      <div class="d-flex flex-column align-items-center justify-content-center">
-        <input type="text" placeholder="Username"></input>
-        <br>
-        <input type="text" placeholder="Email"></input>
-        <br>
-        <input type="text" placeholder="Subject"></input>
-        <br>
-        <input type="text" placeholder="Complaint/Message"></input>
-        <br>
-        <input type="submit" placeholder="Send"></input>
-      </div>
-    </form>
+                <path d="M40 0C17.92 0 0 17.92 0 40C0 62.08 17.92 80 40 80C62.08 80 80 62.08 80 40C80 17.92 62.08 0 40 0ZM40 16C47.72 16 54 22.28 54 30C54 37.72 47.72 44 40 44C32.28 44 26 37.72 26 30C26 22.28 32.28 16 40 16ZM40 72C31.88 72 22.28 68.72 15.44 60.48C22.2 55.2 30.72 52 40 52C49.28 52 57.8 55.2 64.56 60.48C57.72 68.72 48.12 72 40 72Z" fill="black"/>
+            </svg>
+        </div>
+    </header>
+    <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+        <form action="index.html" class="w-50">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <input type="text" placeholder="Username" class="form-control mb-2">
+                <input type="text" placeholder="Email" class="form-control mb-2">
+                <input type="text" placeholder="Subject" class="form-control mb-2">
+                <textarea placeholder="Complaint/Message" class="form-control mb-2"></textarea>
+                <button type="submit" class="btn bg-coral w-25">Send</button>
+            </div>
+        </form>
+    </main>
     <footer class="bg-Tea d-flex justify-content-around align-items-center p-2">
-      <img src="icon/youtube.svg" alt="youtube"/>
-      <img src="icon/email.svg" alt="email"/>
-      <img src="icon/phone.svg" alt="phone"/>  
+        <img src="icon/youtube.svg" alt="youtube">
+        <img src="icon/email.svg" alt="email">
+        <img src="icon/phone.svg" alt="phone">
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
