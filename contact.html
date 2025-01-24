@@ -1,45 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Instellingen voor karaktercodering en viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Link naar Bootstrap CSS voor opmaak van de pagina -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link naar eigen stijlen -->
     <link rel="stylesheet" href="Colors.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-Eggshell d-flex flex-column min-vh-100">
+    <!-- Header sectie met logo en navigatie links -->
     <header class="bg-Tea d-flex justify-content-between align-items-center p-2">
         <img width="250vw" src="logo.svg" alt="logo" />
-        <div class="d-flex">
+        <div class="d-flex gap-5">
           <a href="index.html" class="nav-t-s">Home</a>
           <a href="contact.html" class="nav-t-s">Contact</a>
-        </div>
-        <div>
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M57.1755 50.3145H53.562L52.2813 49.0795C56.7639 43.8651 59.4626 37.0955 59.4626 29.7313C59.4626 13.3105 46.1521 0 29.7313 0C13.3105 0 0 13.3105 0 29.7313C0 46.1521 13.3105 59.4626 29.7313 59.4626C37.0955 59.4626 43.8651 56.7639 49.0795 52.2813L50.3145 53.562V57.1755L73.1847 80L80 73.1847L57.1755 50.3145ZM29.7313 50.3145C18.3419 50.3145 9.14808 41.1206 9.14808 29.7313C9.14808 18.3419 18.3419 9.14808 29.7313 9.14808C41.1206 9.14808 50.3145 18.3419 50.3145 29.7313C50.3145 41.1206 41.1206 50.3145 29.7313 50.3145Z" fill="black"/>
-            </svg>
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M40 0C17.92 0 0 17.92 0 40C0 62.08 17.92 80 40 80C62.08 80 80 62.08 80 40C80 17.92 62.08 0 40 0ZM40 16C47.72 16 54 22.28 54 30C54 37.72 47.72 44 40 44C32.28 44 26 37.72 26 30C26 22.28 32.28 16 40 16ZM40 72C31.88 72 22.28 68.72 15.44 60.48C22.2 55.2 30.72 52 40 52C49.28 52 57.8 55.2 64.56 60.48C57.72 68.72 48.12 72 40 72Z" fill="black"/>
-            </svg>
-        </div>
+      </div>
+        <!-- Social media iconen -->
+        <div class="d-flex justify-content-center align-items-center gap-5">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M57.1755 50.3145H53.562L52.2813 49.0795C56.7639 43.8651 59.4626 37.0955 59.4626 29.7313C59.4626 13.3105 46.1521 0 29.7313 0C13.3105 0 0 13.3105 0 29.7313C0 46.1521 13.3105 59.4626 29.7313 59.4626C37.0955 59.4626 43.8651 56.7639 49.0795 52.2813L50.3145 53.562V57.1755L73.1847 80L80 73.1847L57.1755 50.3145ZM29.7313 50.3145C18.3419 50.3145 9.14808 41.1206 9.14808 29.7313C9.14808 18.3419 18.3419 9.14808 29.7313 9.14808C41.1206 9.14808 50.3145 18.3419 50.3145 29.7313C50.3145 41.1206 41.1206 50.3145 29.7313 50.3145Z" fill="black"/>
+          </svg>
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 0C17.92 0 0 17.92 0 40C0 62.08 17.92 80 40 80C62.08 80 80 62.08 80 40C80 17.92 62.08 0 40 0ZM40 16C47.72 16 54 22.28 54 30C54 37.72 47.72 44 40 44C32.28 44 26 37.72 26 30C26 22.28 32.28 16 40 16ZM40 72C31.88 72 22.28 68.72 15.44 60.48C22.2 55.2 30.72 52 40 52C49.28 52 57.8 55.2 64.56 60.48C57.72 68.72 48.12 72 40 72Z" fill="black"/>
+          </svg>
+      </div>
     </header>
+
+    <!-- Hoofdinhoud van de pagina -->
     <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-        <form action="index.html" class="w-50">
-            <div class="d-flex flex-column align-items-center justify-content-center">
-                <input type="text" placeholder="Username" class="form-control mb-2">
-                <input type="text" placeholder="Email" class="form-control mb-2">
-                <input type="text" placeholder="Subject" class="form-control mb-2">
-                <textarea placeholder="Complaint/Message" class="form-control mb-2"></textarea>
-                <button type="submit" class="btn bg-coral w-25">Send</button>
-            </div>
-        </form>
+        <!-- Contactformulier -->
+        <div class="d-flex justify-content-start w-100">
+            <form id="contactForm" class="w-50 p-2">
+                <div class="d-flex flex-column">
+                    <!-- Invoerveld voor gebruikersnaam -->
+                    <input type="text" placeholder="Username" class="form-control mb-2" style="border: 2px solid #8FC0A9; border-radius: 5px; padding: 10px;">
+                    <!-- Invoerveld voor e-mail -->
+                    <input type="email" placeholder="Email" class="form-control mb-2" style="border: 2px solid #8FC0A9; border-radius: 5px; padding: 10px;">
+                    <!-- Invoerveld voor onderwerp -->
+                    <input type="text" placeholder="Subject" class="form-control mb-2" style="border: 2px solid #8FC0A9; border-radius: 5px; padding: 10px; height: 60px;">
+                    <!-- Tekstgebied voor bericht -->
+                    <textarea placeholder="Complaint/Message" class="form-control mb-2" style="border: 2px solid #8FC0A9; border-radius: 5px; padding: 10px; height: 200px;"></textarea>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Bericht dat verschijnt na succesvol verzenden van het formulier -->
+        <div id="successMessage" style="display:none; color: #8FC0A9;">
+            <p>Bericht verzonden!</p>
+        </div>
+        
+        <!-- Social media iconen -->
+        <div class="d-flex justify-content-between w-50">
+            <img src="Instagram.png" alt="Instagram" class="social-icon">
+            <img src="Facebook(1).png" alt="Facebook" class="social-icon">
+            <img src="LinkedIn.png" alt="LinkedIn" class="social-icon">
+        </div>
     </main>
-    <footer class="bg-Tea d-flex justify-content-around align-items-center p-2">
+
+    <!-- Footer sectie met iconen voor YouTube, e-mail en telefoon -->
+    <footer class="bg-Tea d-flex justify-content-around align-items-center p-4">
         <img src="icon/youtube.svg" alt="youtube">
         <img src="icon/email.svg" alt="email">
         <img src="icon/phone.svg" alt="phone">
     </footer>
+
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Voeg een submit-event toe dat het succesbericht toont
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Voorkomt het standaard verzenden van het formulier
+        // Toon het succesbericht
+        document.getElementById('successMessage').style.display = 'block';
+    });
+
+    // Zorg ervoor dat het formulier wordt ingediend bij het indrukken van Enter
+    document.getElementById('contactForm').addEventListener('keydown', function(e) {
+        // Controleer of de ingedrukte toets 'Enter' is
+        if (e.key === 'Enter') {
+            e.preventDefault(); // Voorkom dat de pagina opnieuw laadt
+            // Stuur het formulier in
+            this.submit();
+        }
+    });
+</script>
 </html>
